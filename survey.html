@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#211B18" />
+    <title>MOVEBOX — Опрос</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="survey-body">
+    <header class="survey-header">
+      <div class="wrap survey-nav">
+        <a href="index.html" class="brand" aria-label="Главная MOVEBOX"><span>MOVE</span>BOX</a>
+        <a href="index.html" class="button button-secondary">На главную</a>
+      </div>
+    </header>
+
+    <main class="survey-page">
+      <div class="wrap survey-shell">
+        <div class="survey-card">
+          <div class="survey-top">
+            <div>
+              <p class="eyebrow">Исследование аудитории</p>
+              <h1>Помоги нам создать MOVEBOX</h1>
+            </div>
+            <div class="progress-pill" id="progressPill">0 / 15</div>
+          </div>
+
+          <p class="survey-intro">
+            Ответь на несколько вопросов, чтобы помочь нам сделать платформу удобной и
+            интересной для будущих пользователей.
+          </p>
+
+          <div class="progress-bar" aria-label="Прогресс опроса">
+            <span id="progressBar"></span>
+          </div>
+
+          <form id="surveyForm" novalidate>
+            <div id="questions"></div>
+
+            <div class="form-actions">
+              <span class="form-hint">Обязательные вопросы отмечены *</span>
+              <button type="submit" class="button button-primary">Отправить ответы</button>
+            </div>
+          </form>
+
+          <div id="thankYou" class="thank-you hidden" aria-live="polite">
+            <div class="thank-icon">✦</div>
+            <h2>Спасибо!</h2>
+            <p>
+              Ваши ответы успешно отправлены. Для удобного хранения в единой базе мы
+              рекомендуем подключить Google Apps Script или Google Forms, а затем настроить
+              запись результатов в Google Sheets.
+            </p>
+            <div class="thank-actions">
+              <button type="button" id="downloadCsv" class="button button-primary">Скачать CSV</button>
+              <a href="index.html" class="button button-secondary">На главную</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
